@@ -16,4 +16,4 @@ jobs:
       - name: delete old docker image
         run:  docker rm -f gateway-service || true
       - name: run docker container
-        run:  docker run -d -p 8761:8761 --name gateway-service --network recruiter-net marjunr/recruiter-gatewayservice
+        run:  docker run -d -p 8765:8765 --name gateway-service --network recruiter-net marjunr/recruiter-gatewayservice
