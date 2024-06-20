@@ -34,8 +34,6 @@ public class JwtAuthenticationFilter extends AbstractGatewayFilterFactory<JwtAut
                 }
                 try{
                     jwtUtil.validateToken(authHeader);
-
-
                     request=exchange.getRequest()
                             .mutate()
                             .header("userName", jwtUtil.extractUsername(authHeader))
