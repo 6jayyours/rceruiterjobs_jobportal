@@ -39,10 +39,10 @@ spring:
           predicates:
             - Path=/api/v1/auth/**
 
-        - id: auth-service
-          uri: lb://AUTH-SERVICE
+        - id: admin-service
+          uri: lb://ADMIN-SERVICE
           predicates:
-            - Path=/api/v1/user/**
+            - Path=/api/v1/admin/**
           filters:
             - JwtAuthenticationFilter
 
