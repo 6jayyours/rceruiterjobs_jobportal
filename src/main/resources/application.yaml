@@ -39,6 +39,16 @@ spring:
           predicates:
             - Path=/api/v1/auth/**
 
+        - id: chatnotifiction-service
+          uri: lb://CHATNOTIFICATION-SERVICE
+          predicates:
+            - Path=/api/app/**
+
+        - id: websocket_route
+          uri: lb:ws://CHATNOTIFICATION-SERVICE
+          predicates:
+            - Path=/api/ws/**
+
         - id: auth-service
           uri: lb://AUTH-SERVICE
           predicates:
@@ -66,4 +76,5 @@ spring:
             - Path=/api/v1/applications/**
           filters:
             - JwtAuthenticationFilter
+
 
