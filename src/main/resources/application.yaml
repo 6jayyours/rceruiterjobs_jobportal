@@ -53,3 +53,17 @@ spring:
           filters:
             - JwtAuthenticationFilter
 
+        - id: jobs-service
+          uri: lb://JOBS-SERVICE
+          predicates:
+            - Path=/api/v1/jobs/**
+          filters:
+            - JwtAuthenticationFilter
+
+        - id: jobs-service
+          uri: lb://JOBS-SERVICE
+          predicates:
+            - Path=/api/v1/applications/**
+          filters:
+            - JwtAuthenticationFilter
+
