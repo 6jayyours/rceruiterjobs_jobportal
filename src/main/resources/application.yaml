@@ -46,6 +46,13 @@ spring:
           filters:
             - JwtAuthenticationFilter
 
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/v1/payment/**
+          filters:
+            - JwtAuthenticationFilter
+
         - id: admin-service
           uri: lb://ADMIN-SERVICE
           predicates:
@@ -71,5 +78,6 @@ spring:
             - Path=/api/v1/applications/**
           filters:
             - JwtAuthenticationFilter
+
 
 
