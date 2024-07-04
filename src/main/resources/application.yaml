@@ -80,7 +80,7 @@ spring:
             - JwtAuthenticationFilter
 
         - id: chatnotification-service
-          uri: lb://CHATNOTOFICATION-SERVICE
+          uri: lb://CHATNOTIFICATION-SERVICE
           predicates:
             - Path=/api/ws/**
 
