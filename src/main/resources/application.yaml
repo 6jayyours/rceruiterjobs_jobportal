@@ -20,7 +20,7 @@ spring:
           '[/**]':
             allowedOrigins:
               - http://localhost:5173
-              - https://recruiterjobs.online
+              - https://xentrik.online
               - https://www.recruiterjobs.online
             allowedMethods:
               - GET
